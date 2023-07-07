@@ -1,7 +1,7 @@
 use std::fs::File;
 use std::io::{BufRead, BufReader};
 
-use day1::report_repair;
+use day1::report_repair_part_one;
 
 mod day1;
 
@@ -13,6 +13,6 @@ fn main() {
         .map(|line| line.expect("Failed to read line"))
         .collect();
 
-    let answer = report_repair(&lines);
+    let answer = report_repair_part_one(&lines);
     println!("Answer is: {}", answer);
 }
