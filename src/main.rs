@@ -1,7 +1,7 @@
 use std::fs::File;
 use std::io::{BufRead, BufReader};
 
-use day2::count_valid_passwords;
+use day2::count_valid_passwords_part_two;
 
 mod day1;
 mod day2;
@@ -14,6 +14,6 @@ fn main() {
         .map(|line| line.expect("Failed to read line"))
         .collect();
 
-    let answer = count_valid_passwords(&lines);
+    let answer = count_valid_passwords_part_two(&lines);
     println!("Answer is: {}", answer);
 }
