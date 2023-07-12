@@ -1,4 +1,3 @@
-use std::{collections::HashMap};
 use regex::Regex;
 
 // https://adventofcode.com/2020/day/2
