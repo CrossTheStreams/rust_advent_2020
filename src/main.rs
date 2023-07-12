@@ -1,7 +1,7 @@
 use std::fs::File;
 use std::io::{BufRead, BufReader};
 
-use day3::count_trees_part_one;
+use day3::count_trees;
 
 mod day1;
 mod day2;
@@ -15,6 +15,10 @@ fn main() {
         .map(|line| line.expect("Failed to read line"))
         .collect();
 
-    let answer = count_trees_part_one(&lines);
+    let mut answer = count_trees(&lines, (1, 1));
+    answer = answer * count_trees(&lines, (3, 1));
+    answer = answer * count_trees(&lines, (5, 1));
+    answer = answer * count_trees(&lines, (7, 1));
+    answer = answer * count_trees(&lines, (1, 2));
     println!("Answer is: {}", answer);
 }
