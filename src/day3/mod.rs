@@ -2,8 +2,6 @@
 
 // https://adventofcode.com/2020/day/3
 
-use std::{ops::Index, string::ParseError};
-
 // // Returns a Vector<String> representing the top crate left on each stack
 pub fn count_trees(grid: &Vec<String>, slope: (usize, usize)) -> usize {
     let mut trees_count = 0;
